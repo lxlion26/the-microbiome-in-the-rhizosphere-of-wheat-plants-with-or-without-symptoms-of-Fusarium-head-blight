@@ -1,0 +1,2 @@
+# the-microbiome-in-the-rhizosphere-of-wheat-plants-with-or-without-symptoms-of-Fusarium-head-blight
+Plant-associated microbiomes can affect plant health, and the rhizosphere is a hotspot to explore. In this research, we used the approaches of amplicon and metagenomic sequencing to investigate the microbiomes in the rhizosphere and roots of wheats with or without the symptoms of Fusarium head blight.
