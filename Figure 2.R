@@ -51,12 +51,12 @@ p.cutoff = 0.05
 
 spman.r0 <- spman.d1
 Cor<-as.matrix(spman.r0$r)
-Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[lower.tri(Cor)]], 
-                   col=colnames(Cor)[col(Cor)[lower.tri(Cor)]], Cor=Cor[lower.tri(Cor)])
+Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[upper.tri(Cor)]], 
+                   col=colnames(Cor)[col(Cor)[upper.tri(Cor)]], Cor=Cor[upper.tri(Cor)])
 
 P0<-as.matrix(spman.r0$p)
-P.df<-data.frame(row=rownames(P0)[row(P0)[lower.tri(P0)]], 
-                 col=colnames(P0)[col(P0)[lower.tri(P0)]], p=P0[lower.tri(P0)])
+P.df<-data.frame(row=rownames(P0)[row(P0)[upper.tri(P0)]], 
+                 col=colnames(P0)[col(P0)[upper.tri(P0)]], p=P0[upper.tri(P0)])
 
 df <- data.frame(Cor.df,  P.df, Compartment = "Rhizosphere", State = "Symptomatic")
 da.tmp<-df.sig<- df[(df$Cor > r.cutoff | df$Cor < -r.cutoff) & df$p < p.cutoff,]
@@ -71,12 +71,12 @@ df.tmp1<-data.frame(da.tmp, M1, M2)
 
 spman.r0 <- spman.d2
 Cor<-as.matrix(spman.r0$r)
-Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[lower.tri(Cor)]], 
-                   col=colnames(Cor)[col(Cor)[lower.tri(Cor)]], Cor=Cor[lower.tri(Cor)])
+Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[upper.tri(Cor)]], 
+                   col=colnames(Cor)[col(Cor)[upper.tri(Cor)]], Cor=Cor[upper.tri(Cor)])
 
 P0<-as.matrix(spman.r0$p)
-P.df<-data.frame(row=rownames(P0)[row(P0)[lower.tri(P0)]], 
-                 col=colnames(P0)[col(P0)[lower.tri(P0)]], p=P0[lower.tri(P0)])
+P.df<-data.frame(row=rownames(P0)[row(P0)[upper.tri(P0)]], 
+                 col=colnames(P0)[col(P0)[upper.tri(P0)]], p=P0[upper.tri(P0)])
 
 df <- data.frame(Cor.df,  P.df, Compartment = "Rhizosphere", State = "Symptomless")
 da.tmp<-df.sig<- df[(df$Cor > r.cutoff | df$Cor < -r.cutoff) & df$p < p.cutoff,]
@@ -92,11 +92,11 @@ df.tmp2<-data.frame(da.tmp, M1, M2)
 
 spman.r0 <- spman.d3
 Cor<-as.matrix(spman.r0$r)
-Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[lower.tri(Cor)]], 
-                   col=colnames(Cor)[col(Cor)[lower.tri(Cor)]], Cor=Cor[lower.tri(Cor)])
+Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[upper.tri(Cor)]], 
+                   col=colnames(Cor)[col(Cor)[upper.tri(Cor)]], Cor=Cor[upper.tri(Cor)])
 P0<-as.matrix(spman.r0$p)
-P.df<-data.frame(row=rownames(P0)[row(P0)[lower.tri(P0)]], 
-                 col=colnames(P0)[col(P0)[lower.tri(P0)]], p=P0[lower.tri(P0)])
+P.df<-data.frame(row=rownames(P0)[row(P0)[upper.tri(P0)]], 
+                 col=colnames(P0)[col(P0)[upper.tri(P0)]], p=P0[upper.tri(P0)])
 
 df <- data.frame(Cor.df,  P.df, Compartment = "Root", State = "Symptomatic")
 da.tmp<-df.sig<- df[(df$Cor > r.cutoff | df$Cor < -r.cutoff) & df$p < p.cutoff,]
@@ -111,12 +111,12 @@ df.tmp3<-data.frame(da.tmp, M1, M2)
 
 spman.r0 <- spman.d4
 Cor<-as.matrix(spman.r0$r)
-Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[lower.tri(Cor)]], 
-                   col=colnames(Cor)[col(Cor)[lower.tri(Cor)]], Cor=Cor[lower.tri(Cor)])
+Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[upper.tri(Cor)]], 
+                   col=colnames(Cor)[col(Cor)[upper.tri(Cor)]], Cor=Cor[upper.tri(Cor)])
 
 P0<-as.matrix(spman.r0$p)
-P.df<-data.frame(row=rownames(P0)[row(P0)[lower.tri(P0)]], 
-                 col=colnames(P0)[col(P0)[lower.tri(P0)]], p=P0[lower.tri(P0)])
+P.df<-data.frame(row=rownames(P0)[row(P0)[upper.tri(P0)]], 
+                 col=colnames(P0)[col(P0)[upper.tri(P0)]], p=P0[upper.tri(P0)])
 df <- data.frame(Cor.df,  P.df, Compartment = "Root", State = "Symptomless")
 da.tmp<-df.sig<- df[(df$Cor > r.cutoff | df$Cor < -r.cutoff) & df$p < p.cutoff,]
 da.tmp$color[da.tmp$Cor>r.cutoff]<-"skyblue"
@@ -953,12 +953,12 @@ p.cutoff = 0.05
 
 spman.r0 <- spman.d1
 Cor<-as.matrix(spman.r0$r)
-Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[lower.tri(Cor)]], 
-                   col=colnames(Cor)[col(Cor)[lower.tri(Cor)]], Cor=Cor[lower.tri(Cor)])
+Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[upper.tri(Cor)]], 
+                   col=colnames(Cor)[col(Cor)[upper.tri(Cor)]], Cor=Cor[upper.tri(Cor)])
 
 P0<-as.matrix(spman.r0$p)
-P.df<-data.frame(row=rownames(P0)[row(P0)[lower.tri(P0)]], 
-                 col=colnames(P0)[col(P0)[lower.tri(P0)]], p=P0[lower.tri(P0)])
+P.df<-data.frame(row=rownames(P0)[row(P0)[upper.tri(P0)]], 
+                 col=colnames(P0)[col(P0)[upper.tri(P0)]], p=P0[upper.tri(P0)])
 
 df <- data.frame(Cor.df,  P.df, Compartment = "Rhizosphere", State = "Symptomatic")
 da.tmp<-df.sig<- df[(df$Cor > r.cutoff | df$Cor < -r.cutoff) & df$p < p.cutoff,]
@@ -974,12 +974,12 @@ df.tmp1<-data.frame(da.tmp, M1, M2)
 
 spman.r0 <- spman.d2
 Cor<-as.matrix(spman.r0$r)
-Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[lower.tri(Cor)]], 
-                   col=colnames(Cor)[col(Cor)[lower.tri(Cor)]], Cor=Cor[lower.tri(Cor)])
+Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[upper.tri(Cor)]], 
+                   col=colnames(Cor)[col(Cor)[upper.tri(Cor)]], Cor=Cor[upper.tri(Cor)])
 
 P0<-as.matrix(spman.r0$p)
-P.df<-data.frame(row=rownames(P0)[row(P0)[lower.tri(P0)]], 
-                 col=colnames(P0)[col(P0)[lower.tri(P0)]], p=P0[lower.tri(P0)])
+P.df<-data.frame(row=rownames(P0)[row(P0)[upper.tri(P0)]], 
+                 col=colnames(P0)[col(P0)[upper.tri(P0)]], p=P0[upper.tri(P0)])
 
 df <- data.frame(Cor.df,  P.df, Compartment = "Rhizosphere", State = "Symptomless")
 da.tmp<-df.sig<- df[ (df$Cor > r.cutoff | df$Cor < -r.cutoff) & df$p < p.cutoff,] 
@@ -995,11 +995,11 @@ df.tmp2<-data.frame(da.tmp, M1, M2)
 
 spman.r0 <- spman.d3
 Cor<-as.matrix(spman.r0$r)
-Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[lower.tri(Cor)]], 
-                   col=colnames(Cor)[col(Cor)[lower.tri(Cor)]], Cor=Cor[lower.tri(Cor)])
+Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[upper.tri(Cor)]], 
+                   col=colnames(Cor)[col(Cor)[upper.tri(Cor)]], Cor=Cor[upper.tri(Cor)])
 P0<-as.matrix(spman.r0$p)
-P.df<-data.frame(row=rownames(P0)[row(P0)[lower.tri(P0)]], 
-                 col=colnames(P0)[col(P0)[lower.tri(P0)]], p=P0[lower.tri(P0)])
+P.df<-data.frame(row=rownames(P0)[row(P0)[upper.tri(P0)]], 
+                 col=colnames(P0)[col(P0)[upper.tri(P0)]], p=P0[upper.tri(P0)])
 
 df <- data.frame(Cor.df,  P.df, Compartment = "Root", State = "Symptomatic")
 da.tmp<-df.sig<- df[ (df$Cor > r.cutoff | df$Cor < -r.cutoff) & df$p < p.cutoff,] 
@@ -1014,12 +1014,12 @@ df.tmp3<-data.frame(da.tmp, M1, M2)
 
 spman.r0 <- spman.d4
 Cor<-as.matrix(spman.r0$r)
-Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[lower.tri(Cor)]], 
-                   col=colnames(Cor)[col(Cor)[lower.tri(Cor)]], Cor=Cor[lower.tri(Cor)])
+Cor.df<-data.frame(row=rownames(Cor)[row(Cor)[upper.tri(Cor)]], 
+                   col=colnames(Cor)[col(Cor)[upper.tri(Cor)]], Cor=Cor[upper.tri(Cor)])
 
 P0<-as.matrix(spman.r0$p)
-P.df<-data.frame(row=rownames(P0)[row(P0)[lower.tri(P0)]], 
-                 col=colnames(P0)[col(P0)[lower.tri(P0)]], p=P0[lower.tri(P0)])
+P.df<-data.frame(row=rownames(P0)[row(P0)[upper.tri(P0)]], 
+                 col=colnames(P0)[col(P0)[upper.tri(P0)]], p=P0[upper.tri(P0)])
 df <- data.frame(Cor.df,  P.df, Compartment = "Root", State = "Symptomless")
 da.tmp<-df.sig<- df[ (df$Cor > r.cutoff | df$Cor < -r.cutoff) & df$p < p.cutoff,] 
 da.tmp$color[da.tmp$Cor>r.cutoff]<-"red"
