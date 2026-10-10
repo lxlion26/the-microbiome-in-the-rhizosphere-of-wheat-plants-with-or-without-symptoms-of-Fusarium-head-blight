@@ -532,7 +532,7 @@ bac.coco<-read.csv("FR.bac-fun.relabu.csv",head=T,row.names = 1)
 matrix2igraph2<-function(matr,r.threshold,p.threshold){
   
   occor<-corAndPvalue(matr,method = c( "spearman")) 
-  mtadj<-mt.rawp2adjp(unlist(occor$p),proc="fdr") 
+  mtadj<-mt.rawp2adjp(unlist(occor$p),proc="BH") 
   adpcor<-mtadj$adjp[order(mtadj$index),2]
   occor.p<-matrix(adpcor,dim(matr)[2])
   occor.r<-occor$cor
@@ -616,7 +616,7 @@ bac.coco<-read.csv("HR.bac-fun.relabu.csv",head=T,row.names = 1)
 matrix2igraph2<-function(matr,r.threshold,p.threshold){
   
   occor<-corAndPvalue(matr,method = c( "spearman")) 
-  mtadj<-mt.rawp2adjp(unlist(occor$p),proc="fdr") 
+  mtadj<-mt.rawp2adjp(unlist(occor$p),proc="BH") 
   adpcor<-mtadj$adjp[order(mtadj$index),2]
   occor.p<-matrix(adpcor,dim(matr)[2])
   occor.r<-occor$cor
@@ -700,7 +700,7 @@ bac.coco<-read.csv("FZ.bac-fun.relabu.csv",head=T,row.names = 1)
 matrix2igraph2<-function(matr,r.threshold,p.threshold){
   
   occor<-corAndPvalue(matr,method = c( "spearman")) 
-  mtadj<-mt.rawp2adjp(unlist(occor$p),proc="fdr") 
+  mtadj<-mt.rawp2adjp(unlist(occor$p),proc="BH") 
   adpcor<-mtadj$adjp[order(mtadj$index),2]
   occor.p<-matrix(adpcor,dim(matr)[2])
   occor.r<-occor$cor
@@ -777,7 +777,7 @@ bac.coco<-read.csv("HZ.bac-fun.relabu.csv",head=T,row.names = 1)
 matrix2igraph2<-function(matr,r.threshold,p.threshold){
   
   occor<-corAndPvalue(matr,method = c( "spearman")) 
-  mtadj<-mt.rawp2adjp(unlist(occor$p),proc="fdr") 
+  mtadj<-mt.rawp2adjp(unlist(occor$p),proc="BH") 
   adpcor<-mtadj$adjp[order(mtadj$index),2]
   occor.p<-matrix(adpcor,dim(matr)[2])
   occor.r<-occor$cor
